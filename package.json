@@ -1,0 +1,27 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "用es6写的前端播放器",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "test": "npm run watch",
+    "dev": "webpack --config dev.config.js",
+    "watch": "webpack --watch --config dev.config.js",
+    "build": "webpack"
+  },
+  "keywords": [
+    "前端播放器"
+  ],
+  "author": "tqh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "svg-inline-loader": "^0.8.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "typings": "typings/index.d.ts"
+}

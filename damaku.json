@@ -1,0 +1,46 @@
+[
+    {
+        "position": 10,
+        "time": 2,
+        "text": "测试弹幕",
+        "color": "#ff0000",
+        "speed": 10,
+        "type": 1
+    },
+    {
+        "position": 15,
+        "time": 3,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    },
+    {
+        "position": 30,
+        "time": 4,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    },
+    {
+        "position": 20,
+        "time": 5,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    },
+    {
+        "position": 150,
+        "time": 7,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    },
+    {
+        "position": 200,
+        "time": 10,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    },
+    {
+        "position": 100,
+        "time": 10,
+        "text": "测试弹幕",
+        "color": "#ff0000"
+    }
+]

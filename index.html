@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+</head>
+
+<body>
+    <div id="all" style="width: 800px;height: 600px;margin: 0 auto;background-color: #000000;font: large"></div>
+    <script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.min.js"></script>
+    <script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.light.min.js"></script>
+    <script src="./dist/tplayer.min.js"></script>
+    <script>
+        let config = {
+            // 视频播放地址
+            "url": "/video/index.m3u8",
+            // "url": "/video/星空花火.flv",
+            // 视频类型
+            "type": "m3u8",
+            // "type": "flv",
+            // 视频播放器容器ID，无 `#`号
+            "containerID": "all",
+            // 菜单
+            "menu": [
+                {
+                    // 菜单样式，链接
+                    "style": "link",
+                    "title": "example",
+                    "link": "http://www.example.com/",
+                    "target": "_blank",
+                },{
+                    // 普通文字
+                    "style": "text",
+                    "title": "example2"
+                }
+            ],
+            // 自动播放
+            autoplay: true,
+            // 初始音量
+            volume: 0.8,
+            // 是否循环
+            loop: true,
+            // 是否显示广告
+            showAd: true,
+            // 是否显示弹幕
+            showDanmaku: true
+        };
+        var xhr = new XMLHttpRequest;
+        xhr.open("GET","damaku.json");
+        xhr.onload = function (){
+            let player = new tplayer(config);
+            // 添加弹幕
+            player.addDanmaku(JSON.parse(this.responseText));
+            // 添加广告
+            player.addAd({
+                // 点击广告跳转地址
+                href: 'http://example.com',
+                // 广告图片地址
+                image: 'ad.png',
+                // 图片无效时显示的文字
+                alt: '广告'
+            });
+            console.log(player);
+            console.log(tplayer.version);
+        };
+        xhr.send();
+    </script>
+</body>
+
+</html>

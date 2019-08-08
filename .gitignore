@@ -1,0 +1,4 @@
+old_*
+/flvjs/
+/node_modules/
+/dist/
